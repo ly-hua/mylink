@@ -55,11 +55,7 @@ export default function Home() {
             <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-30 blur-lg animate-pulse" />
             <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-white/20 shadow-2xl">
               <img
-                src="https://res.cloudinary.com/dt9pxf7yv/image/upload/v1/profile_placeholder"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src =
-                    "https://api.dicebear.com/7.x/bottts-neutral/svg?seed=mylekha";
-                }}
+                src="/profile.jpg"
                 alt="Profile"
                 className="h-full w-full object-cover"
               />

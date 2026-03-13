@@ -19,8 +19,7 @@ const kantumruy = Kantumruy_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "ម៉ាយលេខា POS | MyLekha LinkTree",
-  description: "ប្រព័ន្ធតែមួយ សមស្របសម្រាប់គ្រប់អាជីវកម្ម",
+  title: "lyhour",
 };
 
 export default function RootLayout({
