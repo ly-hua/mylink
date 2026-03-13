@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-outfit), var(--font-geist-sans), ui-sans-serif, system-ui;
+  --font-khmer: var(--font-khmer), serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --primary: #37a486;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-khmer), var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.kh-font {
+  font-family: var(--font-khmer);
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-hover {
+    @apply transition-all duration-300 hover:scale-[1.02] hover:bg-white/10 active:scale-[0.98];
+  }
+
+  .text-glow-green {
+    text-shadow: 0 0 15px rgba(55, 164, 134, 0.4);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
