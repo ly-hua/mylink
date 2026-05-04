@@ -99,16 +99,9 @@ export default function Home() {
               },
               {
                 title: "Github",
-                icon: "fab fa-youtube",
-                color: "#FF0000",
+                icon: "fab fa-github",
+                color: "#181717",
                 href: "https://github.com/ly-hua",
-              },
-              {
-                title: "Website",
-                sub: "អំពីយើង តម្លៃ សេវាកម្ម និងផលិតផល",
-                icon: "fas fa-globe",
-                color: "#37a486",
-                href: "https://mylekha.net/",
               },
               {
                 title: "+855 95 391 294",
